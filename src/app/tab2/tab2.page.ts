@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FotoService } from '../services/foto.service';
 
 @Component({
   selector: 'app-tab2',
@@ -13,7 +12,7 @@ export class Tab2Page {
   luckyNumber: number;
   inputNumber: number;
 
-  constructor(public fotoService:FotoService) {}
+  constructor() {}
   
   async ngOnInit() {
     // await this.fotoService.loadFoto()
@@ -29,9 +28,5 @@ export class Tab2Page {
       this.loser = true
       this.winner = false
     }
-  }
-
-  tambahFoto() {
-    this.fotoService.tambahFoto()
   }
 }
